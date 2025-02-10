@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Day Special</title>
+    <style>
+        body {
+            font-family: 'Cursive', sans-serif;
+            background: url('https://th.bing.com/th/id/R.c5c02d58ee02df1ff03b8402b3acb98b?rik=tUJLL44Fee4S8A&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fd%2f2%2fa%2f319833.jpg&ehk=EioGOu4hjuzBowXatu4KmNmdPh5FGuQG0rainGyqApk%3d&risl=&pid=ImgRaw&r=0') no-repeat center center/cover;
+            text-align: center;
+            padding: 20px;
+            color: black;
+            
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px;
+            text-align: center;
+            background: url("https://th.bing.com/th/id/R.3d00b03d2f16dd7383ee49a0c96ab461?rik=%2b%2fQD1fzNC5lXFw&riu=http%3a%2f%2fs1.bwallpapers.com%2fwallpapers%2f2014%2f01%2f23%2flove-heart_105743899.jpg&ehk=rRXZnb28fl4eC2eWnPAbAfzuY2IJ%2bk4TlGaG0FJXDP0%3d&risl=&pid=ImgRaw&r=0");
+            margin-left: 1250px;
+            border-image-width: 7px;
+            margin-top: 350px;
+            border-radius: 7px;
+            display: inline-block;
+            box-shadow: turquoise;
+            border: 10px solid pink;
+            text-align: center;
+            
+
+        }
+        .quote-box {
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+            color: #333;
+            padding: 15px;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            width: 150px;
+            height: auto;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #ff66b2;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #ff3385;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Teddy Day! 🧸</h1>
+        <div class="quote-box" id="quote"></div>
+        <button onclick="changeQuote()">Read my quotes baby 💕</button>
+    </div>
+
+    <script>
+        const quotes = [
+            "💕 Just like this teddy, I promise to always be soft, warm, and full of love for you. Happy Teddy Day, my love!",
+            "🧸 Every hug, every cuddle reminds me of the warmth of your love. You're my cutest teddy, Lakshmi!",
+            "💖 On this Teddy Day, I send you a teddy as soft as my heart, as cute as you, and as lovable as our love!",
+            "🌸 Whenever you hug this teddy, know that I am hugging you from miles away. Love you always!"
+        ];
+
+        function changeQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerText = quotes[randomIndex];
+        }
+
+        function autoChangeQuote() {
+            setInterval(changeQuote, 3000); // Change quote every 3 seconds
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            changeQuote();
+            autoChangeQuote();
+        });
+    </script>
+</body>
+</html>
